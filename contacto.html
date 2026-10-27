@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title> Catalina González Contacto</title>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+</head>
+
+<!-- Header Principal -->
+    <header class="principal-inicio">
+        <span class="logo"><span class="fuente-cursiva">Cg</span></span>
+        <nav class="principal">
+            <a href="index.html" class="inicio">INICIO</a>
+            <a href="sobre-mi.html" class="sobre-mi">SOBRE MÍ</a>
+            <a href="contacto.html" class="contacto activo">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- Main / Contacto -->
+    <main class="contacto-main">
+        <div class="contacto-container">
+            
+            <!-- Columna Izquierda: Textos descriptivos -->
+            <div class="contacto-textos">
+                <h1>Contactame</h1>
+                <p class="sub-intro">¿Tenés un proyecto en mente y querés que trabajemos en equipo? Me encantaría escucharlo.</p>
+                <p>Completá el siguiente formulario contándonos tu proyecto y a la brevedad vas a recibir un mail para coordinar una reunión.</p>
+            </div>
+
+            <!-- Columna Derecha: Recuadro azul con el formulario -->
+            <form class="formulario-contacto">
+                <div class="campos">
+                    
+                    <!-- Campo Nombre y Apellido -->
+                    <div class="campo-input">
+                        <input type="text" id="input-nombre" placeholder="Nombre y Apellido" required>
+                    </div>
+
+                    <!-- Campo País de Residencia Personalizado (ul / li) -->
+                    <div class="custom-select-container">
+                        <div class="select-trigger" id="select-trigger">
+                            <span class="placeholder-text">País de residencia</span>
+                        </div>
+                        <input type="hidden" id="pais-input" required>
+                        <ul class="lista-paises" id="lista-paises">
+                            <li>Argentina</li>
+                            <li>Uruguay</li>
+                            <li>Paraguay</li>
+                            <li>Chile</li>
+                            <li>Perú</li>
+                            <li>Bolivia</li>
+                            <li>Colombia</li>
+                            <li>Ecuador</li>
+                            <li>México</li>
+                            <li>España</li>
+                        </ul>
+                    </div>
+
+                    <!-- Campo Correo Electrónico -->
+                    <div class="campo-input">
+                        <input type="email" id="input-correo" placeholder="Correo electrónico" required>
+                    </div>
+
+                    <!-- Campo Mensaje -->
+                    <div class="campo-input">
+                        <textarea id="input-mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Botón Enviar -->
+                <button type="submit" class="enviar">
+                    <span>ENVIAR</span>
+                </button>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Modal de Éxito -->
+    <div id="modal-exito" class="modal-overlay">
+        <div class="modal-contenido">
+            <button type="button" id="cerrar-modal" class="modal-cerrar">x</button>
+            <p>El formulario fue enviado correctamente.</p>
+        </div>
+    </div>
+
+    <!-- Footer Principal -->
+    <footer class="principal">
+        <div class="informacion">
+            <img src="img/instagram.png" alt="logo-instagram" class="logo-instagram">
+            <small class="copyright">Buenos Aires, Argentina<br>Todos los derechos reservados</small>
+        </div>
+        <span class="logo"><span class="fuente-cursiva">Cg</span></span>
+    </footer>
+
+    <!-- Script para el formulario, modal y la lista desplegable personalizada -->
+    <script>
+        const form = document.querySelector('.formulario-contacto');
+        const modal = document.getElementById('modal-exito');
+        const cerrarBtn = document.getElementById('cerrar-modal');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        });
+
+        cerrarBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        /* Lógica del selector personalizado de países */
+        const trigger = document.getElementById('select-trigger');
+        const list = document.getElementById('lista-paises');
+        const hiddenInput = document.getElementById('pais-input');
+        const items = list.querySelectorAll('li');
+        const spanText = trigger.querySelector('span');
+
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        });
+
+        items.forEach(item => {
+            item.addEventListener('click', function() {
+                spanText.textContent = this.textContent;
+                spanText.style.color = '#2E40FA';
+                hiddenInput.value = this.textContent;
+                list.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function() {
+            list.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

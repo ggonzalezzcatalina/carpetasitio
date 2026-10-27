@@ -1,0 +1,604 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epunda Sans', sans-serif;
+    background-color: #F8F6F0;
+    color: #2E40FA; 
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Clase de utilidad para la tipografía cursiva Herr Von Muellerhoff */
+.fuente-cursiva {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+/* header y footer */
+.principal-inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E40FA;
+    height: 75px;
+    padding: 0 80px;
+    width: 100%;
+}
+
+.principal-inicio .logo {
+    color: #FFFFFF;
+}
+
+.principal-inicio nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.principal-inicio nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    border: 1.2px solid #FFFFFF;
+    width: 125px;
+    height: 38px;
+    border-radius: 25px;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.principal-inicio nav a.activo {
+    background-color: #FFFFFF;
+    color: #2E40FA;
+}
+
+.principal-inicio nav a:hover:not(.activo) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+footer.principal {
+    background-color: #2E40FA;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    font-size: 0.8rem;
+    font-family: 'Epunda Sans', sans-serif;
+}
+
+footer.principal .informacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+footer.principal .logo-instagram {
+    width: 24px;
+    height: 24px;
+}
+
+footer.principal .copyright {
+    line-height: 1.3;
+    font-size: 0.78rem;
+}
+
+footer.principal .logo {
+    color: #FFFFFF;
+}
+
+
+/* aca empezaria el main del index */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 80px;
+    width: 100%;
+}
+
+.hero .rectangle-4 {
+    width: 100%;
+    max-width: 1450px;
+    height: 300px;     
+    border: 1.8px solid #2E40FA;
+    position: relative;
+    overflow: hidden;
+    background-color: #F8F6F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px; 
+}
+
+.hero .rectangle-4 video.reel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
+.tira-proyectos {
+    width: 100vw;
+    height: 60px;
+    background-color: #2E40FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.tira-proyectos h2 {
+    color: #FFFFFF;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.proyectos article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.slider-escualo,
+.slider-botanico,
+.slider-botanico-web,
+.slider-wayrun-tripantu {
+    position: relative;
+    width: 520px;
+    height: 420px;
+    border: 1.8px solid #2E40FA;
+    padding: 20px;
+    background-color: #F8F6F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.slider-escualo img,
+.slider-botanico img,
+.slider-botanico-web img,
+.slider-wayrun-tripantu img {
+    max-width: 100%;
+    max-height: 310px;
+    object-fit: contain;
+    display: block;
+}
+
+.proyectos article .btn-siguiente {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #2E40FA;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ellipses-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ellipse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1.2px solid #2E40FA;
+    display: inline-block;
+}
+
+.ellipse.ellipse-activa {
+    background-color: #2E40FA;
+}
+
+.texto-escualo,
+.texto-botanico,
+.texto-botanico-web,
+.texto-wayrun-tripantu {
+    flex: 1;
+    font-family: 'Epunda Sans', sans-serif;
+}
+
+.proyectos h3 {
+    font-size: 1.3rem;
+    color: #2E40FA;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Epunda Sans', sans-serif;
+}
+
+.proyectos h3 .fuente-cursiva {
+    font-size: 2.2rem;
+    margin-left: 5px;
+}
+
+.proyectos p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #2E40FA;
+    font-family: 'Epunda Sans', sans-serif;
+}
+
+.fila-gracias {
+    background-color: #2E40FA;
+    color: #FFFFFF;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 14px 0;
+    margin-top: 100px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    font-family: 'Epunda Sans', sans-serif;
+    user-select: none;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 40px;
+    animation: marquee 20s linear infinite;
+    flex-shrink: 0;
+    padding-right: 40px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+.sobremi-contactame {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 20px;
+    max-width: 950px;
+    margin: 0 auto;
+    font-family: 'Epunda Sans', sans-serif;
+}
+
+.sobremi-contactame .enlace-interactivo {
+    color: #2E40FA;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sobremi-contactame .palabra-destacada {
+    font-weight: 600;
+    text-decoration: underline;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.sobremi-contactame .enlace-interactivo:hover .palabra-destacada {
+    transform: scale(1.08);
+}
+
+.sobremi-contactame .divisor {
+    height: 45px;
+    border: none;
+    border-left: 1.5px dashed #2E40FA;
+}
+
+
+/* aca empezaria la pagine sobre-mi */
+
+main.sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px; 
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    gap: 80px;
+}
+
+main.sobre-mi .fondo-foto {
+    background-color: #2E40FA;
+    width: 420px;
+    height: 500px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+main.sobre-mi .fondo-foto img.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+main.sobre-mi .texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-family: 'Epunda Sans', sans-serif;
+    color: #2E40FA;
+}
+
+main.sobre-mi .quien-soy h1,
+main.sobre-mi .herramientas h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2E40FA;
+    margin-bottom: 12px;
+}
+
+main.sobre-mi .quien-soy p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #2E40FA;
+}
+
+.iconos-herramientas {
+    display: flex;
+    gap: 15px;
+}
+
+.logo-tool {
+    width: 45px;
+    height: 45px;
+    border: 1.5px solid #2E40FA;
+    border-radius: 50%;
+    object-fit: contain;
+    padding: 9px;
+    background-color: #F8F6F0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* aca empezaria la pagina de contacto */
+
+.contacto-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px; 
+    width: 100%;
+}
+
+.contacto-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1450px;
+    gap: 80px;
+}
+
+.contacto-textos {
+    width: 45%;
+    font-family: 'Epunda Sans', sans-serif;
+    color: #2E40FA;
+}
+
+.contacto-textos h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2E40FA;
+    margin-bottom: 12px;
+}
+
+.contacto-textos .sub-intro {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.contacto-textos p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.formulario-contacto {
+    background-color: #2E40FA;
+    width: 420px;
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formulario-contacto .campos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    background-color: #F8F6F0;
+    border: none;
+    padding: 14px 18px;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    color: #2E40FA;
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: #8c9ac2;
+}
+
+.formulario-contacto textarea {
+    resize: none;
+    height: 130px;
+}
+
+.custom-select-container {
+    position: relative;
+    width: 100%;
+}
+
+.select-trigger {
+    width: 100%;
+    background-color: #F8F6F0;
+    border: none;
+    padding: 14px 18px;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 0.88rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.select-trigger .placeholder-text {
+    color: #8c9ac2;
+}
+
+.lista-paises {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 160px; 
+    overflow-y: auto;
+    background-color: #F8F6F0;
+    border: 1.5px solid #2E40FA;
+    list-style: none;
+    z-index: 99;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-paises li {
+    padding: 12px 18px;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 0.88rem;
+    color: #2E40FA;
+    cursor: pointer;
+    border-bottom: 1px solid #2E40FA;
+    background-color: #F8F6F0;
+    transition: background-color 0.2s ease;
+}
+
+.lista-paises li:last-child {
+    border-bottom: none;
+}
+
+.lista-paises li:hover {
+    background-color: rgba(46, 64, 250, 0.1);
+}
+
+.formulario-contacto .enviar {
+    background-color: #FFFFFF;
+    color: #2E40FA;
+    border: none;
+    width: 115px;
+    height: 38px;
+    border-radius: 20px;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.3s ease;
+}
+
+.formulario-contacto .enviar:hover {
+    background-color: #f0ede6;
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background-color: #2E40FA;
+    color: #FFFFFF;
+    width: 480px;
+    height: 220px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Epunda Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-cerrar:hover {
+    opacity: 0.8;
+}
