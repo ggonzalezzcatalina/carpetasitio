@@ -4,59 +4,62 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Conocé a Catalina González, estudiante de diseño y comunicación visual apasionada por el branding y el diseño editorial.">
     <title>Catalina González - Sobre Mí</title>
-    <!-- Ruta corregida ya que estilos.css está en la raíz -->
-    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- Header Principal unificado -->
+
+    <!-- Header Principal -->
     <header class="principal-inicio">
-        <span class="logo"><span class="fuente-cursiva">Cg</span></span>
-        <nav class="principal">
-            <a href="index.html" class="inicio">INICIO</a>
-            <a href="sobre-mi.html" class="sobre-mi activo">SOBRE MÍ</a>
-            <a href="contacto.html" class="contacto">CONTACTO</a>
+        <button type="button" class="menu-hamburguesa" id="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable"></button>
+        <p class="logo">Cg</p>
+        <nav class="principal" id="menu-desplegable">
+            <a href="index.html">INICIO</a>
+            <a href="sobre-mi.html" class="activo" aria-current="page">SOBRE MÍ</a>
+            <a href="contacto.html">CONTACTO</a>
         </nav>
     </header>
 
     <!-- Main / Sobre Mí -->
     <main class="sobre-mi">
-        <!-- Bloque del recuadro azul y foto de perfil -->
         <div class="fondo-foto">
-            <img src="img/perfil.jpg" alt="foto-perfil" class="foto-perfil">
-            <div class="background"></div>
+            <img src="img/catalinaportada.compu3.jpg" alt="Retrato de Catalina González" class="foto-perfil" width="360" height="440">
         </div>
 
-        <!-- Bloque de Texto -->
         <div class="texto">
-            <!-- Sección Quién Soy -->
             <section class="quien-soy">
                 <h1>¿Quién soy?</h1>
-                <p>Hola! Soy Catalina González, estudiante de Diseño y Comunicación Visual, apasionada por el branding y el diseño editorial. Me interesa que cada pieza cuente una historia y que la identidad de una marca se sienta en los detalles.</p>
+                <p>¡Hola! Soy Catalina González, estudiante de Diseño y Comunicación Visual, apasionada por el branding y el diseño editorial. Me interesa que cada pieza cuente una historia y que la identidad de una marca se sienta en los detalles.</p>
                 <p>Además del diseño gráfico me gusta mucho el arte en general, la música, la danza, así que siempre estoy buscando trabajar de alguna manera con proyectos que se relacionen de alguna manera a ellos ya que siento que es donde saco mi mayor sensibilidad a la hora de diseñar.</p>
             </section>
 
-            <!-- Sección Herramientas (con imágenes) -->
             <section class="herramientas">
-                <h1>Manejo de herramientas</h1>
+                <h2>Manejo de herramientas</h2>
                 <div class="iconos-herramientas">
-                    <img src="img/ps.png" alt="Photoshop" class="logo-tool">
-                    <img src="img/ai.png" alt="Illustrator" class="logo-tool">
-                    <img src="img/id.png" alt="InDesign" class="logo-tool">
+                    <img src="img/logo-photoshop.png" alt="Logo de Photoshop" class="logo-tool" width="45" height="45">
+                    <img src="img/logo-illustrator.png" alt="Logo de Illustrator" class="logo-tool" width="45" height="45">
+                    <img src="img/logo-indesing.png" alt="Logo de InDesign" class="logo-tool" width="45" height="45">
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Footer Principal unificado -->
+    <!-- Footer Principal -->
     <footer class="principal">
         <div class="informacion">
-            <img src="img/instagram.png" alt="logo-instagram" class="logo-instagram">
-            <small class="copyright">Buenos Aires, Argentina<br>Todos los derechos reservados</small>
+            <img src="img/logo-ig-blanco.png" alt="Logo de Instagram" class="logo-instagram" width="24" height="24">
+            <div class="copyright">
+                <p>Buenos Aires, Argentina</p>
+                <p>Todos los derechos reservados</p>
+            </div>
         </div>
-        <span class="logo"><span class="fuente-cursiva">Cg</span></span>
+        <p class="logo">Cg</p>
     </footer>
+
 </body>
+
 </html>

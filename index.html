@@ -4,44 +4,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title> Catalina González Portfolio</title>
-    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <meta name="description" content="Portfolio de Catalina González, estudiante de diseño y comunicación visual. Branding, diseño editorial y proyectos que cruzan arte, música y danza.">
+    <title>Catalina González Portfolio</title>
+    <link rel="stylesheet" href="estilos.css">
     <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+    <script src="script.js" defer></script>
 </head>
 
-<!-- Header Principal -->
+<body>
+
+    <!-- Header Principal -->
     <header class="principal-inicio">
-        <span class="logo"><span class="fuente-cursiva">Cg</span></span>
-        <nav class="principal">
-            <a href="index.html" class="inicio activo">INICIO</a>
-            <a href="sobre-mi.html" class="sobre-mi">SOBRE MÍ</a>
-            <a href="contacto.html" class="contacto">CONTACTO</a>
+        <button type="button" class="menu-hamburguesa" id="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable"></button>
+        <p class="logo">Cg</p>
+        <nav class="principal" id="menu-desplegable">
+            <a href="index.html" class="activo" aria-current="page">INICIO</a>
+            <a href="sobre-mi.html">SOBRE MÍ</a>
+            <a href="contacto.html">CONTACTO</a>
         </nav>
     </header>
 
     <!-- Contenido Principal -->
     <main class="principal">
-        
-        <!-- Sección Hero con Marco y Video Adentro -->
+
+    
         <section class="hero">
+            <h1 class="visually-hidden">Portfolio de Catalina González</h1>
             <div class="rectangle-4">
-                <video class="reel" src="video/reel.mp4" controls autoplay muted loop></video>
+                <video class="reel" src="video/video.mp4" controls autoplay muted loop playsinline width="1200" height="260"></video>
             </div>
         </section>
 
-        <!-- Tira de Proyectos Full Width -->
+       
         <section class="tira-proyectos">
             <h2>PROYECTOS</h2>
         </section>
 
-        <!-- Sección Proyectos (Estructura en Zigzag) -->
         <section class="proyectos">
 
-            <!-- 1. Proyecto Escualo (3 imágenes) -->
+            <!-- 1. Proyecto Escualo -->
             <article class="proyecto-escualo">
-                <div class="slider-escualo">
-                    <button type="button" class="btn-siguiente">></button>
-                    <img src="img/escualo-1.jpg" alt="escualo-1" class="escualo-1">
+                <div class="slider">
+                    <button type="button" class="btn-anterior" aria-label="Imagen anterior" hidden>&lt;</button>
+                    <button type="button" class="btn-siguiente" aria-label="Imagen siguiente">&gt;</button>
+                    <img src="img/escualofrentetapaig.jpg" alt="Portada del álbum Escualo vista de frente" class="slide slide-activa" width="450" height="350">
+                    <img src="img/mockupdiscoatras.compu3.jpg" alt="Contraportada del álbum Escualo" class="slide" width="450" height="350">
+                    <img src="img/mockupdisco.compu3.jpg" alt="Etiqueta central del disco de vinilo de Escualo" class="slide" width="450" height="350">
+
                     <div class="ellipses-container">
                         <span class="ellipse ellipse-activa"></span>
                         <span class="ellipse"></span>
@@ -54,15 +63,18 @@
                 </div>
             </article>
 
-            <!-- 2. Proyecto Botánico (2 imágenes) -->
+            <!-- 2. Proyecto Botánico -->
             <article class="proyecto-botanico">
                 <div class="texto-botanico">
                     <h3>Proyecto: <span class="fuente-cursiva">Botánico</span></h3>
                     <p>Diseño de menú y carta de experiencias para 'Botánico', un espacio gastronómico especializado en el maridaje de vinos y cocina de autor. El proyecto busca transmitir la sutileza, el origen natural y la elegancia del encuentro entre la enología y la gastronomía mediante una diagramación limpia, una paleta cromática orgánica y una jerarquía tipográfica impecable que guía al comensal en su recorrido sensorial.</p>
                 </div>
-                <div class="slider-botanico">
-                    <button type="button" class="btn-siguiente">></button>
-                    <img src="img/botanico-1.jpg" alt="botanico-1" class="botanico-1">
+                <div class="slider">
+                    <button type="button" class="btn-anterior" aria-label="Imagen anterior" hidden>&lt;</button>
+                    <button type="button" class="btn-siguiente" aria-label="Imagen siguiente">&gt;</button>
+                    <img src="img/botanicomockup.compu3.jpg" alt="Portada del menú de Botánico" class="slide slide-activa" width="450" height="350">
+                    <img src="img/botanicomockup2.compu3.jpg" alt="Página interior del menú de Botánico" class="slide" width="450" height="350">
+
                     <div class="ellipses-container">
                         <span class="ellipse ellipse-activa"></span>
                         <span class="ellipse"></span>
@@ -70,11 +82,15 @@
                 </div>
             </article>
 
-            <!-- 3. Proyecto Escualo Web (3 imágenes) -->
+            <!-- 3. Proyecto Botánico Web -->
             <article class="proyecto-escualo-web">
-                <div class="slider-botanico-web">
-                    <button type="button" class="btn-siguiente">></button>
-                    <img src="img/botanico-web-1.jpg" alt="botanico-web-1" class="botanico-web-1">
+                <div class="slider">
+                    <button type="button" class="btn-anterior" aria-label="Imagen anterior" hidden>&lt;</button>
+                    <button type="button" class="btn-siguiente" aria-label="Imagen siguiente">&gt;</button>
+                    <img src="img/carrusel1.compu3.jpg" alt="Publicación de Instagram de Botánico: el plato del día" class="slide slide-activa" width="450" height="350">
+                    <img src="img/carrusel2.compu3.jpg" alt="Publicación de Instagram de Botánico: qué es Botánico" class="slide" width="450" height="350">
+                    <img src="img/carrusel3.compu3.jpg" alt="Publicación de Instagram de Botánico con la dirección del restaurante" class="slide" width="450" height="350">
+
                     <div class="ellipses-container">
                         <span class="ellipse ellipse-activa"></span>
                         <span class="ellipse"></span>
@@ -82,20 +98,23 @@
                     </div>
                 </div>
                 <div class="texto-botanico-web">
-                    <h3>Proyecto: <span class="fuente-cursiva">Escualo Web</span></h3>
+                    <h3>Proyecto: <span class="fuente-cursiva">Botánico Web</span></h3>
                     <p>Desarrollo de piezas digitales para Instagram de la red de Botánico, proyectando la identidad de la marca al entorno digital. A través de un sistema visual coherente, se crearon plantillas y publicaciones orientadas a destacar la cocina de estación, la selección de vinos de autor y la experiencia del espacio. El proyecto combina composiciones limpias, una paleta cromática de tonos orgánicos y una jerarquía tipográfica pensada para mantener la elegancia y la fluidez visual en el feed.</p>
                 </div>
             </article>
 
-            <!-- 4. Proyecto Wayrun Tripantu (2 imágenes) -->
+            <!-- 4. Proyecto Wayrun y Tripantu -->
             <article class="proyecto-wayrun-tripantu">
                 <div class="texto-wayrun-tripantu">
                     <h3>Proyecto: <span class="fuente-cursiva">Wayrun y Tripantu</span></h3>
                     <p>Diseño de identidad de marca para Wayrun y Tripantu, dos proyectos con identidades y propósitos diferentes. Para Wayrun, marca de indumentaria de running, se trabajó un lenguaje visual dinámico y sintético que transmite movimiento, dirección y energía sobre textiles técnicos. Por su parte, Tripantu, es una casa de objetos de decoración para el hogar, la propuesta se centró en formas orgánicas y un espíritu cálido que evoca la armonía del espacio.</p>
                 </div>
-                <div class="slider-wayrun-tripantu">
-                    <button type="button" class="btn-siguiente">></button>
-                    <img src="img/wayrun-tripantu-1.jpg" alt="wayrun-tripantu-1" class="wayrun-tripantu-1">
+                <div class="slider">
+                    <button type="button" class="btn-anterior" aria-label="Imagen anterior" hidden>&lt;</button>
+                    <button type="button" class="btn-siguiente" aria-label="Imagen siguiente">&gt;</button>
+                    <img src="img/wayrun.compu3.jpg" alt="Logo de Wayrun, marca de indumentaria de running" class="slide slide-activa" width="450" height="350">
+                    <img src="img/tripantu.compu3.jpg" alt="Logo de Tripantu, casa de objetos de decoración" class="slide" width="450" height="350">
+
                     <div class="ellipses-container">
                         <span class="ellipse ellipse-activa"></span>
                         <span class="ellipse"></span>
@@ -105,33 +124,22 @@
 
         </section>
 
-        <!-- Banner Animado (Marquee / Gracias por ver) -->
-        <div class="fila-gracias">
-            <div class="marquee-content">
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-            </div>
-            <div class="marquee-content" aria-hidden="true">
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-                <span>¡GRACIAS POR VER!</span>
-            </div>
-        </div>
+        <marquee class="fila-gracias" scrollamount="6" aria-hidden="true">
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+            <span>¡GRACIAS POR VER!</span>
+        </marquee>
 
         <!-- Sección Sobre mí / Contacto -->
         <section class="sobremi-contactame">
-            <a href="sobre-mi.html" class="enlace-interactivo">Conocé más <span class="palabra-destacada">sobre mi</span></a>
+            <a href="sobre-mi.html" class="enlace-interactivo">Conocé más <span class="palabra-destacada">sobre mí</span></a>
             <hr class="divisor">
             <a href="contacto.html" class="enlace-interactivo">Para trabajar juntxs <span class="palabra-destacada">contactame</span></a>
         </section>
@@ -141,11 +149,15 @@
     <!-- Footer Principal -->
     <footer class="principal">
         <div class="informacion">
-            <img src="img/instagram.png" alt="logo-instagram" class="logo-instagram">
-            <small class="copyright">Buenos Aires, Argentina<br>Todos los derechos reservados</small>
+            <img src="img/logo-ig-blanco.png" alt="Logo de Instagram" class="logo-instagram" width="24" height="24">
+            <div class="copyright">
+                <p>Buenos Aires, Argentina</p>
+                <p>Todos los derechos reservados</p>
+            </div>
         </div>
-        <span class="logo"><span class="fuente-cursiva">Cg</span></span>
+        <p class="logo">Cg</p>
     </footer>
 
 </body>
+
 </html>
